@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista dos cadastrados</title>
+</head>
+<body>
+  <h1>LISTAS DE PESSOAS</h1>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>NOME</td>
+            <td>EMAIL</td>
+            <td>FONE</td>
+        </tr>
+        <tr th:each="p : ${pessoas}">
+            <td th:text = "${p.id}"></td>
+            <td th:text = "${p.nome}"></td>
+            <td th:text = "${p.email}"></td>
+            <td th:text = "${p.fone}"></td>
+        </tr>
+    </table>
+  <a href="/">PAGINA INICIAL</a>
+</body>
+</html>
