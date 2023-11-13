@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Registro</title>
+</head>
+<body>
+
+<form th:action="@{/salvar}" method="post">
+
+    <!-- Cliente -->
+    <h2>Dados do Cliente</h2>
+    <label>Endereço:</label>
+    <input type="text" th:field="*{cliente.endereco}" /><br/>
+    <label>Email:</label>
+    <input type="text" th:field="*{cliente.email}" /><br/>
+    <label>Fone:</label>
+    <input type="text" th:field="*{cliente.fone}" /><br/>
+
+    <input type="submit" value="Registrar" />
+</form>
+
+</body>
+</html>
