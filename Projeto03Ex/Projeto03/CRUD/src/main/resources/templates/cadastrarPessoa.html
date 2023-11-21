@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" th:replace="~{template :: layout (~{:: main})}">
+<body>
+    <main>
+
+<form action="#" th:action="@{/pessoa/save}" th:object="${pessoa}" method="post">
+
+    <div class="field">
+        <label class="label">Nome*</label>
+        <div class="control">
+            <input class="input is-primary" type="text" placeholder="Text input" th:field="*{nome}" required>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-primary" type="text" placeholder="Text input" th:field="*{email}" required>
+        </div>
+
+    <div class="field">
+         <label class="label">Fone*</label>
+         <div class="control has-icons-left has-icons-right">
+             <input class="input is-primary" type="text" placeholder="Text input" th:field="*{fone}" required>
+         </div>
+
+    <input class="button is-primary" type="submit" value="Salvar">
+<a class="button is-primary" href="/">INDEX</a>
+    </main>
+
+</body>
+</html>
