@@ -2,7 +2,7 @@
 <html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="layout (conteudo)">
 <head>
     <meta charset="UTF-8">
-    <title>Login - CRUD SITE</title>
+    <title>Login </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
@@ -15,18 +15,13 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a>
-                            <!-- Botão descomentado para alternar o tema: <button class="button" onclick="toggleTheme()">Alternar Tema</button> -->
-                        </a>
                         <a class="button" href="#">
                             Ajuda
                         </a>
-                        <a class="button" href="#">
+                        <a id="contatoButton" class="button" href="#">
                             Contato
                         </a>
-                        <a class="button is-danger" href="#">
-                            Logout
-                        </a>
+                        <a class="button is-primary" href="#">Cadastrar</a> <!-- Botão Cadastrar adicionado -->
                     </div>
                 </div>
             </div>
@@ -75,5 +70,17 @@
     <div class="content has-text-centered">
     </div>
 </footer>
+<script>
+    // Adiciona um ouvinte de evento para o botão de contato
+    document.getElementById('contatoButton').addEventListener('click', function() {
+        // Mensagem de contato dos criadores
+        var mensagemContato = "Criadores:\n\nRoger da Palma - Email rogerdapalma@gmail.com\n" +
+            "Meani Freitas - Email meani.sf@gmail.com " + "\nGuilherme Painko - Email gui.painko2393@gmail.com ";
+
+        // Exibe a mensagem na tela (pode ser adaptado para usar um modal)
+        alert(mensagemContato);
+    });
+
+</script>
 </body>
 </html>
